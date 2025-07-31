@@ -1,1 +1,0 @@
-﻿{"inkVersion":21,"root":[["ev","str","^Nick","/str","/ev",{"VAR=":"speaker","re":true},"^Hello Matt.","\n","ev","str","^Matt","/str","/ev",{"VAR=":"speaker","re":true},"^Hi Nick","\n","end",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev","str","^","/str",{"VAR=":"speaker"},"/ev","end",null],"#f":1}],"listDefs":{}}

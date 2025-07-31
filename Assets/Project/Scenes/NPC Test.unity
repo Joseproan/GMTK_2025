@@ -155,10 +155,10 @@ RectTransform:
   - {fileID: 77568370}
   m_Father: {fileID: 1530438928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: -200, y: 200}
+  m_SizeDelta: {x: 630, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20489465
 MonoBehaviour:
@@ -523,8 +523,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.005714774, y: 0.10572332}
-  m_Size: {x: 1, y: 1.7829236}
+  m_Offset: {x: 0.06937963, y: 0.013941288}
+  m_Size: {x: 0.7079663, y: 1.0570111}
   m_Direction: 0
 --- !u!4 &440944006
 Transform:
@@ -648,7 +648,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.2846117
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -883,7 +883,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 4.2846117
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1123,6 +1123,7 @@ MonoBehaviour:
   speakers:
   - {fileID: 11400000, guid: c9bf92bb3ef6796419321d4363de1720, type: 2}
   - {fileID: 11400000, guid: 6f3fafc2fca8be441b8f86b222b074a7, type: 2}
+  - {fileID: 11400000, guid: 9ca9ea8587b50204490f8dc1b4dc4922, type: 2}
 --- !u!4 &1164436884
 Transform:
   m_ObjectHideFlags: 0
@@ -1203,8 +1204,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0.5283019, g: 0.41896212, b: 0.002491996, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4878264e89d48114ab6c0e36c0725780, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1296,7 +1297,7 @@ GameObject:
   - component: {fileID: 1304675363}
   - component: {fileID: 1304675365}
   m_Layer: 0
-  m_Name: Intro
+  m_Name: Bepple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,8 +1347,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.32704395, g: 0.24374028, b: 0.27088848, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a3ca8dbc610f71c4e9270409927d772d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1366,7 +1367,7 @@ Transform:
   m_GameObject: {fileID: 1304675362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.58, y: 0.3, z: 0}
+  m_LocalPosition: {x: 12.5, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1385,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2203869e54d8ed44aa5f2846b84b9a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 0dea431a835d24d489b4630b200741e4, type: 3}
+  inkJSON: {fileID: 4900000, guid: 76c4bd870dbb3f748916da616f145099, type: 3}
   interactionUI: {fileID: 1860867228}
   interactionRange: 3
   npcName: Pebble Alt
@@ -1455,7 +1456,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.000000059604645, y: -0.9057912}
+  m_Offset: {x: 0.07718046, y: -0.56786644}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1465,7 +1466,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.21136177, y: 0.19421756}
+  m_Size: {x: 0.36572263, y: 0.085747}
   m_EdgeRadius: 0
 --- !u!1 &1530438927
 GameObject:

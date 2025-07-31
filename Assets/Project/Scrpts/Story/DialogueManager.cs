@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     private string currentNPC;
     public bool DialogueIsPlaying { get; private set; }
-
+    
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -24,7 +24,6 @@ public class DialogueManager : MonoBehaviour
         currentNPC = npcName;
         DialogueIsPlaying = true;
         DialogueUI.Instance.ShowUI(true);
-        ContinueStory();
         ContinueStory();
     }
 
@@ -43,6 +42,15 @@ public class DialogueManager : MonoBehaviour
             DialogueUI.Instance.SetSpeaker(currentNPC);
             DialogueUI.Instance.DisplayNPCLine(text);
             DialogueUI.Instance.ClearChoices();
+            if (text.Length == 0)
+            {
+                if (currentStory.currentChoices.Count > 0)
+                {
+                    DialogueUI.Instance.SetSpeaker("Pebble");
+                    DialogueUI.Instance.HideNPCLine();
+                    DialogueUI.Instance.DisplayChoices(currentStory.currentChoices);
+                }
+            }
         }
         
         else if (!CanContinueStory())
