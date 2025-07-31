@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueIsPlaying && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)))
+        if (DialogueIsPlaying && InputManager.ContinueStoryWasPressed)
         {
             ContinueStory();
         }

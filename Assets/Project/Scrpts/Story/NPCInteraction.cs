@@ -28,7 +28,7 @@ public class NPCInteraction : MonoBehaviour
 
         interactionUI.SetActive(isPlayerNear);
 
-        if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerNear && InputManager.InteractWasPressed)
         {
             DialogueManager.Instance.EnterDialogueMode(inkJSON);
         }

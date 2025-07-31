@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ContinueStory",
+                    "type": "Button",
+                    "id": "4765e741-9214-4f0e-b607-564bc3450367",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -164,12 +173,12 @@
                 },
                 {
                     "name": "",
-                    "id": "9ebce3f9-60eb-4264-88f9-68a12a9db791",
+                    "id": "94f51e58-5c71-460a-9b9d-1ac526c81959",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "ContinueStory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

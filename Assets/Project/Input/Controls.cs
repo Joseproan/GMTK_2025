@@ -135,6 +135,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ContinueStory"",
+                    ""type"": ""Button"",
+                    ""id"": ""4765e741-9214-4f0e-b607-564bc3450367"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -250,12 +259,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9ebce3f9-60eb-4264-88f9-68a12a9db791"",
+                    ""id"": ""94f51e58-5c71-460a-9b9d-1ac526c81959"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Interact"",
+                    ""action"": ""ContinueStory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -271,6 +280,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_ContinueStory = m_Player.FindAction("ContinueStory", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -356,6 +366,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_ContinueStory;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -387,6 +398,10 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/ContinueStory".
+        /// </summary>
+        public InputAction @ContinueStory => m_Wrapper.m_Player_ContinueStory;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -428,6 +443,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @ContinueStory.started += instance.OnContinueStory;
+            @ContinueStory.performed += instance.OnContinueStory;
+            @ContinueStory.canceled += instance.OnContinueStory;
         }
 
         /// <summary>
@@ -454,6 +472,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @ContinueStory.started -= instance.OnContinueStory;
+            @ContinueStory.performed -= instance.OnContinueStory;
+            @ContinueStory.canceled -= instance.OnContinueStory;
         }
 
         /// <summary>
@@ -529,5 +550,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ContinueStory" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnContinueStory(InputAction.CallbackContext context);
     }
 }
