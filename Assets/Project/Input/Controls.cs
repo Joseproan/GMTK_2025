@@ -144,6 +144,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UpArrow"",
+                    ""type"": ""Button"",
+                    ""id"": ""adda1ba1-2f8d-45f7-9852-fa066ee79ebf"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DownArrow"",
+                    ""type"": ""Button"",
+                    ""id"": ""51c4a8c1-dd6e-4b48-b281-33f1c904e760"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -267,6 +285,50 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""ContinueStory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""55f57b8f-5e5f-487a-9791-261f57d77cc0"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpArrow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""74d7a477-c097-4857-9100-55bfbf500c15"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UpArrow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""38e07f37-abaa-40e1-bb86-80ff60d83548"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DownArrow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8add474d-3b17-479a-be70-7a2a7570678d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DownArrow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -281,6 +343,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_ContinueStory = m_Player.FindAction("ContinueStory", throwIfNotFound: true);
+        m_Player_UpArrow = m_Player.FindAction("UpArrow", throwIfNotFound: true);
+        m_Player_DownArrow = m_Player.FindAction("DownArrow", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -367,6 +431,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_ContinueStory;
+    private readonly InputAction m_Player_UpArrow;
+    private readonly InputAction m_Player_DownArrow;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -402,6 +468,14 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/ContinueStory".
         /// </summary>
         public InputAction @ContinueStory => m_Wrapper.m_Player_ContinueStory;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/UpArrow".
+        /// </summary>
+        public InputAction @UpArrow => m_Wrapper.m_Player_UpArrow;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/DownArrow".
+        /// </summary>
+        public InputAction @DownArrow => m_Wrapper.m_Player_DownArrow;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -446,6 +520,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @ContinueStory.started += instance.OnContinueStory;
             @ContinueStory.performed += instance.OnContinueStory;
             @ContinueStory.canceled += instance.OnContinueStory;
+            @UpArrow.started += instance.OnUpArrow;
+            @UpArrow.performed += instance.OnUpArrow;
+            @UpArrow.canceled += instance.OnUpArrow;
+            @DownArrow.started += instance.OnDownArrow;
+            @DownArrow.performed += instance.OnDownArrow;
+            @DownArrow.canceled += instance.OnDownArrow;
         }
 
         /// <summary>
@@ -475,6 +555,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @ContinueStory.started -= instance.OnContinueStory;
             @ContinueStory.performed -= instance.OnContinueStory;
             @ContinueStory.canceled -= instance.OnContinueStory;
+            @UpArrow.started -= instance.OnUpArrow;
+            @UpArrow.performed -= instance.OnUpArrow;
+            @UpArrow.canceled -= instance.OnUpArrow;
+            @DownArrow.started -= instance.OnDownArrow;
+            @DownArrow.performed -= instance.OnDownArrow;
+            @DownArrow.canceled -= instance.OnDownArrow;
         }
 
         /// <summary>
@@ -557,5 +643,19 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnContinueStory(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "UpArrow" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnUpArrow(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "DownArrow" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnDownArrow(InputAction.CallbackContext context);
     }
 }

@@ -103,10 +103,10 @@ TextureImporter:
       name: ground sketch_grass_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 134
-        height: 50
+        x: 0
+        y: 35
+        width: 45
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,6 +117,182 @@ TextureImporter:
       bones: []
       spriteID: c73393b26c150b370800000000000000
       internalID: 8336252821833331580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 35
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d3804ead42b9f42bda9edfc496cd8d
+      internalID: -521956661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 35
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65cd66d333e972498360a86d276831c
+      internalID: 1426620457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68eba3466fff9b40a357cbda23dc83d
+      internalID: -39425874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 18
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccbdb4b0d3737d41bed1956c4545b52
+      internalID: -1418958047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 18
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2a96dcec7bfa14d81b77141506817c
+      internalID: -1789686504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5db00d59c51d14a8fb3ffeb6e56545
+      internalID: -1839764979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 1
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a40dc8059635a04c9f5d5c3d602a65f
+      internalID: 1743921391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground sketch_grass_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1
+        width: 45
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf80faf0b8e33f94ea93e49996488f0b
+      internalID: 220128619
       vertices: []
       indices: 
       edges: []
@@ -133,9 +309,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":45.0,"y":17.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       ground sketch_grass_0: 8336252821833331580
+      ground sketch_grass_1: -521956661
+      ground sketch_grass_2: 1426620457
+      ground sketch_grass_3: -39425874
+      ground sketch_grass_4: -1418958047
+      ground sketch_grass_5: -1789686504
+      ground sketch_grass_6: -1839764979
+      ground sketch_grass_7: 1743921391
+      ground sketch_grass_8: 220128619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

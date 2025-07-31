@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
-    [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private GameObject interactionUI;
-    [SerializeField] private float interactionRange = 3f;
-
+    public TextAsset inkJSON;
+    public GameObject interactionUI;
+    public float interactionRange = 3f;
+    public string npcName;
     private Transform player;
     private bool isPlayerNear = false;
 
-    private void Start()
+    public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         interactionUI.SetActive(false);
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (DialogueManager.Instance.DialogueIsPlaying)
         {
@@ -30,7 +30,7 @@ public class NPCInteraction : MonoBehaviour
 
         if (isPlayerNear && InputManager.InteractWasPressed)
         {
-            DialogueManager.Instance.EnterDialogueMode(inkJSON);
+            DialogueManager.Instance.EnterDialogueMode(inkJSON,npcName);
         }
     }
 }

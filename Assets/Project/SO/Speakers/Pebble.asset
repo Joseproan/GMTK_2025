@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab3a9623e1708c7458b683d238a51025, type: 3}
-  m_Name: Nick
+  m_Name: Pebble
   m_EditorClassIdentifier: 
-  speakerID: Nick
-  displayName: Nick
-  portrait: {fileID: 21300000, guid: a3ca8dbc610f71c4e9270409927d772d, type: 3}
+  speakerID: Pebble
+  displayName: Pebble
+  portrait: {fileID: 21300000, guid: 4878264e89d48114ab6c0e36c0725780, type: 3}
