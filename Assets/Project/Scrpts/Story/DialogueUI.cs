@@ -35,7 +35,6 @@ public class DialogueUI : MonoBehaviour
 
     public void ShowUI(bool show)
     {
-        Debug.Log("Showing UI");
         dialoguePanel.SetActive(show);
         if (!show)
         {

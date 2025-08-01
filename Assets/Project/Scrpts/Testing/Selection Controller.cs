@@ -10,6 +10,6 @@ public class SelectionController : MonoBehaviour
 
     public void NPC()
     {
-        SceneManager.LoadScene("NPC Test");
+        SceneManager.LoadScene("Cannon Test");
     }
 }

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/Intro Test.unity
     guid: 4f28db0e162690e4a8ef33c8f0ce0494
   - enabled: 1
+    path: Assets/Project/Scenes/Cannon Test.unity
+    guid: b7655abfd66a2fb4d81b79b9ef660b26
+  - enabled: 1
     path: Assets/Project/Scenes/NPC Test.unity
     guid: e5dee4701d28efb49a6abd8dcacca04d
   m_configObjects:
