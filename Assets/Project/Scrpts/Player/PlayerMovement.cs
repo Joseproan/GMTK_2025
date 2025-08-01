@@ -201,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _jumpBufferTimer = 0;
-        numberOfJumpsUsed += numberOfJumpsUsed;
+        _numberOfJumpsUsed += numberOfJumpsUsed;
         VerticalVelocity = MoveStats.InitialJumpVelocity;
     }
     private void Jump()
