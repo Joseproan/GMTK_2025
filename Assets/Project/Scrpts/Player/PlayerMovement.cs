@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         JumpChecks();
         LandCheck();
 
-        WallSliderCheck();
+        //WallSliderCheck();
     }
 
     private void FixedUpdate()
@@ -83,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         CollisionChecks();
         Jump();
         Fall();
-        WallSlide();
+        //WallSlide();
 
         if (_isGrounded)
         {
@@ -550,7 +550,7 @@ public class PlayerMovement : MonoBehaviour
     {
         IsGrounded();
         BumpedHead();
-        IsTouchingWall();
+        //IsTouchingWall();
     }
 
     #endregion
