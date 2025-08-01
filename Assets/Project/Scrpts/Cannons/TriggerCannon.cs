@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
 public class TriggerCannon : MonoBehaviour
 {
     [Header("Corpse Settings")]
     public GameObject corpsePrefab;
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         int layer = collision.gameObject.layer;
         
