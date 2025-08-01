@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -9,8 +10,15 @@ public class Bullet : MonoBehaviour
     [Header("Corpse Settings")]
     public GameObject corpsePrefab;
 
+    private Rigidbody2D rb;
     private Vector2 moveDirection;
     private float lifeTimer;
+    [HideInInspector] public GameObject parentCannon;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     public void SetDirection(Vector2 direction)
     {
@@ -21,7 +29,7 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+        rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
 
         lifeTimer -= Time.deltaTime;
         if (lifeTimer <= 0f)
@@ -52,8 +60,9 @@ public class Bullet : MonoBehaviour
         // If hit corpse, ground, or cannon
         else if (layer == LayerMask.NameToLayer("Corpse") ||
                  layer == LayerMask.NameToLayer("Ground") ||
-                 layer == LayerMask.NameToLayer("Cannon"))
+                 layer == LayerMask.NameToLayer("Cannon") && collision.gameObject != parentCannon)
         {
+            Debug.Log(collision.gameObject.name);
             ReturnToPool();
         }
     }

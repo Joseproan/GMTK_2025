@@ -55,6 +55,7 @@ public class Cannon : MonoBehaviour
     {
         GameObject bulletObj = ObjectPooler.Instance.SpawnFromPool(bulletTag, firePoint.position, Quaternion.identity);
         var bullet = bulletObj.GetComponent<Bullet>();
+        bullet.parentCannon = gameObject;
         bullet.SetDirection(direction.normalized);
     }
 

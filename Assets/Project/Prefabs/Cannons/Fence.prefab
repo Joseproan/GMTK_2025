@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 6284692791888670765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -0.259, z: 0}
+  m_LocalPosition: {x: -0.8, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2007454516171310255}
   - component: {fileID: 4406115780512463281}
   - component: {fileID: 8423627452992315078}
+  - component: {fileID: 803703696057350945}
   m_Layer: 8
   m_Name: Fence
   m_TagString: Cannon
@@ -215,3 +216,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7, y: 1.7151322}
   m_EdgeRadius: 0
+--- !u!114 &803703696057350945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402628354496562595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa5689b3c1683b4f8d166bf66f02965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corpsePrefab: {fileID: 7394186905179221359, guid: 28099a65d1aefae49ab83d99ac329be6, type: 3}
