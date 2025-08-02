@@ -4,15 +4,11 @@ public class Cannon : MonoBehaviour
 {
     [Header("Detection")]
     public float detectionRange = 5f;
-    public LayerMask playerLayer;
 
     [Header("Shooting")]
     public Transform firePoint;
     public float shootCooldown = 1.5f;
     public string bulletTag = "EnemyBullet";
-
-    public enum Direction { Up, Down, Left, Right }
-    public Direction shootDirection = Direction.Right;
 
     private Transform player;
     private float shootTimer;
@@ -32,23 +28,10 @@ public class Cannon : MonoBehaviour
             shootTimer -= Time.deltaTime;
             if (shootTimer <= 0f)
             {
-                Vector2 direction = GetShootDirection();
-                Shoot(direction);
+                Shoot(transform.up);
                 shootTimer = shootCooldown;
             }
         }
-    }
-
-    private Vector2 GetShootDirection()
-    {
-        return shootDirection switch
-        {
-            Direction.Up => Vector2.up,
-            Direction.Down => Vector2.down,
-            Direction.Left => Vector2.left,
-            Direction.Right => Vector2.right,
-            _ => Vector2.right
-        };
     }
 
     void Shoot(Vector2 direction)
