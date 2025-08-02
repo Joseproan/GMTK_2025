@@ -44,6 +44,7 @@ public class GrabObjects : MonoBehaviour
             grabbedObject.transform.SetParent(transform);
             isGrabbing = true;
             interactionCanvas.SetActive(false);
+            AudioManager.Instance.PlaySFX("Player", "Grab");
         }
         else if (isGrabbing && !checkDrop.dontDrop && InputManager.InteractWasPressed)
         {
@@ -52,6 +53,7 @@ public class GrabObjects : MonoBehaviour
             grabbedObject.transform.SetParent(null);
             isGrabbing = false;
             StartCoroutine(EnableCannonCo());
+            AudioManager.Instance.PlaySFX("Player", "Put");
         }
     }
 

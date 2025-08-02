@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     private float _timePastWallJumppApexThreshold;
     private bool _isPastWallJumpApexThreshold;
     private Animator anim;
-
+    private bool newFall;
     private void Awake()
     {
         _isFacingRight = true;
@@ -207,7 +207,8 @@ public class PlayerMovement : MonoBehaviour
         _isFastFalling = false;
         _fastFallTime = 0f;
         _isPastApexThreshold = false;
-        
+        AudioManager.Instance.PlaySFX("Player", "Fall");
+
     }
     private void JumpChecks()
     {
@@ -215,6 +216,7 @@ public class PlayerMovement : MonoBehaviour
         if (InputManager.JumpWasPressed)
         {
             anim.SetTrigger("Jump");
+            newFall = true;
             AudioManager.Instance.PlaySFX("Player", "Jump");
             if (_isWallSlideFalling && _wallJumpPostBufferTimer >= 0f)
             {
@@ -458,6 +460,12 @@ public class PlayerMovement : MonoBehaviour
         Vector2 boxCastSize = new Vector2(_feetColl.bounds.size.x, MoveStats.GroundDetectRayLenght);
 
         _groundHit = Physics2D.BoxCast(boxCastOrigin, boxCastSize, 0f, Vector2.down, MoveStats.GroundDetectRayLenght, MoveStats.GroundLayer);
+
+        if(newFall && _isGrounded)
+        {
+            newFall = false;
+            //AudioManager.Instance.PlaySFX("Player", "Fall");
+        }
         if (_groundHit.collider != null)
         {
             _isGrounded = true;
