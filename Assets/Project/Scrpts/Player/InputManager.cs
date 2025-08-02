@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     public static bool UpArrowWasPressed;
     public static bool DownArrowWasPressed;
     public static bool SucideWasPressed;
+    public static bool PauseWasPressed;
 
     private InputAction _moveAction;
     private InputAction _jumpAction;
@@ -24,6 +25,7 @@ public class InputManager : MonoBehaviour
     private InputAction _upArrowAction;
     private InputAction _downArrowAction;
     private InputAction _suicideAction;
+    private InputAction _pauseAction;
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class InputManager : MonoBehaviour
         _upArrowAction = PlayerInput.actions["UpArrow"];
         _downArrowAction = PlayerInput.actions["DownArrow"];
         _suicideAction = PlayerInput.actions["Suicide"];
+        _pauseAction = PlayerInput.actions["Pause"];
     }
 
     private void Update()
@@ -57,5 +60,7 @@ public class InputManager : MonoBehaviour
         DownArrowWasPressed = _downArrowAction.WasPressedThisFrame();
 
         SucideWasPressed = _suicideAction.WasPressedThisFrame();
+
+        PauseWasPressed = _pauseAction.WasPressedThisFrame();
     }
 }
