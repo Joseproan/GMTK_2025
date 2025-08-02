@@ -23,7 +23,7 @@ MonoBehaviour:
   MaxRunSpeed: 10
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 832
   GroundDetectRayLenght: 0.02
   HeadDetecionRayLenght: 0.02
   HeadWidth: 0.75

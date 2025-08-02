@@ -18,6 +18,7 @@ public class GrabObjects : MonoBehaviour
             if(InputManager.InteractWasPressed && grabbedObject == null)
             {
                 grabbedObject = checkDrop.cannon;
+                checkDrop.cannon.GetComponent<Cannon>().enabled = false;
                 grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
                 grabbedObject.GetComponent<BoxCollider2D>().enabled = false;
                 grabbedObject.transform.position = grabPoint.position;
@@ -30,6 +31,7 @@ public class GrabObjects : MonoBehaviour
                 grabbedObject.GetComponent<BoxCollider2D>().enabled = true;
                 grabbedObject.transform.SetParent(null);
                 grabbedObject = null;
+                checkDrop.cannon.GetComponent<Cannon>().enabled = true;
             }
 
 
