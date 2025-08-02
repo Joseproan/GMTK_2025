@@ -105,7 +105,7 @@ MonoBehaviour:
   speed: 3
   lifeTime: 20
   corpsePrefab: {fileID: 7394186905179221359, guid: 0a8339b3a2532d940b41d410c255ce79, type: 3}
-  duration: 0.5
+  duration: 3
   easeType: 27
   delay: 0
   particlePrefab: {fileID: 0}
@@ -145,8 +145,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.05290193}
-  m_Radius: 0.29882854
+  m_Offset: {x: 0, y: -0.077664495}
+  m_Radius: 0.13674599
 --- !u!50 &-9185034676509885519
 Rigidbody2D:
   serializedVersion: 5

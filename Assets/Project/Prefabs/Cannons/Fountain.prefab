@@ -137,13 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 10
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
   firePoint: {fileID: 2826178706462102336}
-  shootCooldown: 1.5
+  shootCooldown: 4
   bulletTag: Water
-  shootDirection: 0
 --- !u!50 &4406115780512463281
 Rigidbody2D:
   serializedVersion: 5
@@ -206,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleAmount: 0.1
-  duration: 0.5
+  duration: 1
   easeType: 4
 --- !u!61 &6962439640856834428
 BoxCollider2D:

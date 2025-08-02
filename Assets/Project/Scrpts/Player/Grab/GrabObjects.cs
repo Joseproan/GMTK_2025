@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GrabObjects : MonoBehaviour
@@ -49,9 +50,15 @@ public class GrabObjects : MonoBehaviour
             grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             grabbedObject.GetComponent<BoxCollider2D>().enabled = true;
             grabbedObject.transform.SetParent(null);
-            grabbedObject.GetComponent<Cannon>().enabled = true;
-            grabbedObject = null;
             isGrabbing = false;
+            StartCoroutine(EnableCannonCo());
         }
+    }
+
+    IEnumerator EnableCannonCo()
+    {
+        yield return new WaitForSeconds(1f);
+        grabbedObject.GetComponent<Cannon>().enabled = true;
+        grabbedObject = null;
     }
 }
