@@ -13,6 +13,7 @@ public class GrabObjects : MonoBehaviour
 
     public LayerMask cannonLayer;
     private bool isGrabbing;
+    [SerializeField] private GameObject interactionCanvas;
 
     private void Start()
     {
@@ -21,6 +22,16 @@ public class GrabObjects : MonoBehaviour
     private void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(rayPoint.position, Vector2.right, rayDistance, cannonLayer);
+
+
+        if (hit.collider != null && hit.collider.CompareTag("Cannon") && !isGrabbing)
+        {
+            interactionCanvas.SetActive(true);
+        }
+        else
+        {
+            interactionCanvas.SetActive(false);
+        }
 
         if (hit.collider != null && hit.collider.CompareTag("Cannon") && InputManager.InteractWasPressed && grabbedObject == null && !isGrabbing)
         {
@@ -31,6 +42,7 @@ public class GrabObjects : MonoBehaviour
             grabbedObject.transform.position = grabPoint.position;
             grabbedObject.transform.SetParent(transform);
             isGrabbing = true;
+            interactionCanvas.SetActive(false);
         }
         else if (isGrabbing && !checkDrop.dontDrop && InputManager.InteractWasPressed)
         {
