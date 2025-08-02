@@ -278,6 +278,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_isJumping)
         {
             _isJumping = true;
+            AudioManager.Instance.PlaySFX("Player", "Jump");
         }
 
         ResetWallJumpValues();

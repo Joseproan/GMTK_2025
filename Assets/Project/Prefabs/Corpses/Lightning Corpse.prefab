@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6570821136749964937}
   - component: {fileID: 2751399461268436935}
   - component: {fileID: 6767436248853777555}
+  - component: {fileID: 1364962512189953507}
   m_Layer: 9
   m_Name: Lightning Corpse
   m_TagString: Corpse
@@ -185,3 +186,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1364962512189953507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394186905179221359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b10de15fee537345ab009af655e21c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
