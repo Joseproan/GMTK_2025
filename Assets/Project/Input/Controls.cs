@@ -164,7 +164,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Restart"",
+                    ""name"": ""Suicide"",
                     ""type"": ""Button"",
                     ""id"": ""73dba050-f8d8-4fe9-a5ae-ab0efcca357d"",
                     ""expectedControlType"": """",
@@ -368,7 +368,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Restart"",
+                    ""action"": ""Suicide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -387,7 +387,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_ContinueStory = m_Player.FindAction("ContinueStory", throwIfNotFound: true);
         m_Player_UpArrow = m_Player.FindAction("UpArrow", throwIfNotFound: true);
         m_Player_DownArrow = m_Player.FindAction("DownArrow", throwIfNotFound: true);
-        m_Player_Restart = m_Player.FindAction("Restart", throwIfNotFound: true);
+        m_Player_Suicide = m_Player.FindAction("Suicide", throwIfNotFound: true);
     }
 
     ~@Controls()
@@ -476,7 +476,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ContinueStory;
     private readonly InputAction m_Player_UpArrow;
     private readonly InputAction m_Player_DownArrow;
-    private readonly InputAction m_Player_Restart;
+    private readonly InputAction m_Player_Suicide;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -521,9 +521,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @DownArrow => m_Wrapper.m_Player_DownArrow;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Restart".
+        /// Provides access to the underlying input action "Player/Suicide".
         /// </summary>
-        public InputAction @Restart => m_Wrapper.m_Player_Restart;
+        public InputAction @Suicide => m_Wrapper.m_Player_Suicide;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -574,9 +574,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @DownArrow.started += instance.OnDownArrow;
             @DownArrow.performed += instance.OnDownArrow;
             @DownArrow.canceled += instance.OnDownArrow;
-            @Restart.started += instance.OnRestart;
-            @Restart.performed += instance.OnRestart;
-            @Restart.canceled += instance.OnRestart;
+            @Suicide.started += instance.OnSuicide;
+            @Suicide.performed += instance.OnSuicide;
+            @Suicide.canceled += instance.OnSuicide;
         }
 
         /// <summary>
@@ -612,9 +612,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @DownArrow.started -= instance.OnDownArrow;
             @DownArrow.performed -= instance.OnDownArrow;
             @DownArrow.canceled -= instance.OnDownArrow;
-            @Restart.started -= instance.OnRestart;
-            @Restart.performed -= instance.OnRestart;
-            @Restart.canceled -= instance.OnRestart;
+            @Suicide.started -= instance.OnSuicide;
+            @Suicide.performed -= instance.OnSuicide;
+            @Suicide.canceled -= instance.OnSuicide;
         }
 
         /// <summary>
@@ -712,11 +712,11 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDownArrow(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Restart" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Suicide" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnRestart(InputAction.CallbackContext context);
+        void OnSuicide(InputAction.CallbackContext context);
     }
 }

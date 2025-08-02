@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1001266584704772063}
   - component: {fileID: 696287083872332557}
   - component: {fileID: 4869351453063093226}
+  - component: {fileID: 4442064238261190645}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -263,6 +264,22 @@ MonoBehaviour:
   rayPoint: {fileID: 758078741546758635}
   rayDistance: 1
   checkDrop: {fileID: 3513909348444190727}
+  cannonLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &4442064238261190645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4655489621807564997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75d27045ea3b3994087863612b1f6586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corpsePrefab: {fileID: 7394186905179221359, guid: e72070231cebfc24395875647a158ae4, type: 3}
 --- !u!1 &5713437168042706004
 GameObject:
   m_ObjectHideFlags: 0
