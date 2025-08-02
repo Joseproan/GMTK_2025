@@ -11,34 +11,35 @@ public class GrabObjects : MonoBehaviour
 
     private GameObject grabbedObject;
 
+    public LayerMask cannonLayer;
+    private bool isGrabbing;
+
     private void Start()
     {
         checkDrop.dontDrop = true;
     }
     private void Update()
     {
-        if(checkDrop.detectCannon)
+        RaycastHit2D hit = Physics2D.Raycast(rayPoint.position, Vector2.right, rayDistance, cannonLayer);
+
+        if (hit.collider != null && hit.collider.CompareTag("Cannon") && InputManager.InteractWasPressed && grabbedObject == null && !isGrabbing)
         {
-            if(InputManager.InteractWasPressed && grabbedObject == null)
-            {
-                grabbedObject = checkDrop.cannon;
-                checkDrop.cannon.GetComponent<Cannon>().enabled = false;
-                grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                grabbedObject.GetComponent<BoxCollider2D>().enabled = false;
-                grabbedObject.transform.position = grabPoint.position;
-                grabbedObject.transform.SetParent(transform);
-            }
-
-            else if (InputManager.InteractWasPressed && checkDrop.dontDrop)
-            {
-                grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                grabbedObject.GetComponent<BoxCollider2D>().enabled = true;
-                grabbedObject.transform.SetParent(null);
-                grabbedObject = null;
-                checkDrop.cannon.GetComponent<Cannon>().enabled = true;
-            }
-
-
+            grabbedObject = hit.collider.gameObject;
+            grabbedObject.GetComponent<Cannon>().enabled = false;
+            grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            grabbedObject.GetComponent<BoxCollider2D>().enabled = false;
+            grabbedObject.transform.position = grabPoint.position;
+            grabbedObject.transform.SetParent(transform);
+            isGrabbing = true;
+        }
+        else if (isGrabbing && !checkDrop.dontDrop && InputManager.InteractWasPressed)
+        {
+            grabbedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            grabbedObject.GetComponent<BoxCollider2D>().enabled = true;
+            grabbedObject.transform.SetParent(null);
+            grabbedObject.GetComponent<Cannon>().enabled = true;
+            grabbedObject = null;
+            isGrabbing = false;
         }
     }
 }

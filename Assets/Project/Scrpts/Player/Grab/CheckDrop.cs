@@ -7,6 +7,7 @@ public class CheckDrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.layer == LayerMask.NameToLayer("Cannon"))
         {
             // Aquí va tu lógica al colisionar con un objeto de la layer "Cannon"
@@ -19,11 +20,13 @@ public class CheckDrop : MonoBehaviour
             // Aquí va tu lógica al colisionar con un objeto de la layer "Cannon"
             dontDrop = true;
         }
-
+        */
+        dontDrop = true;
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.layer == LayerMask.NameToLayer("Cannon"))
         {
             // Aquí va tu lógica al colisionar con un objeto de la layer "Cannon"
@@ -34,6 +37,7 @@ public class CheckDrop : MonoBehaviour
         {
             // Aquí va tu lógica al colisionar con un objeto de la layer "Cannon"
             dontDrop = true;
-        }
+        }*/
+        dontDrop = false;
     }
 }
