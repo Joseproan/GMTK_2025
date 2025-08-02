@@ -1,34 +1,23 @@
-using System.Collections;
 using UnityEngine;
 
 public class LightingCorpse : MonoBehaviour
 {
-    public float pushForce = 2f;
-    public float pushDuration = 0.2f; // tiempo que tarda en empujar
+    public float pushForce = 20f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Vector2 pushDir = (collision.transform.position - transform.position).normalized;
-            Vector3 targetPos = collision.transform.position + (Vector3)(pushDir * pushForce);
-            StartCoroutine(PushPlayerSmoothly(collision.transform, targetPos));
+            Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
+            if (playerRb != null)
+            {
+                // Usamos el punto de contacto real para mayor precisión
+                ContactPoint2D contact = collision.contacts[0];
+                Vector2 pushDir = (contact.point - (Vector2)transform.position).normalized;
+
+                playerRb.linearVelocity = Vector2.zero; // Reset para evitar interferencias
+                playerRb.AddForce(pushDir * pushForce, ForceMode2D.Impulse);
+            }
         }
-    }
-
-    private IEnumerator PushPlayerSmoothly(Transform player, Vector3 targetPos)
-    {
-        float elapsed = 0f;
-        Vector3 startPos = player.position;
-
-        while (elapsed < pushDuration)
-        {
-            elapsed += Time.deltaTime;
-            float t = elapsed / pushDuration;
-            player.position = Vector3.Lerp(startPos, targetPos, t);
-            yield return null;
-        }
-
-        player.position = targetPos; // asegurarse que llega al final
     }
 }

@@ -305,13 +305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionRange: 10
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
   firePoint: {fileID: 2826178706462102336}
   shootCooldown: 1.5
   bulletTag: Wind
-  shootDirection: 2
 --- !u!50 &4406115780512463281
 Rigidbody2D:
   serializedVersion: 5

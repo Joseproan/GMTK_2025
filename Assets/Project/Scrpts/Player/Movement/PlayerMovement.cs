@@ -61,12 +61,14 @@ public class PlayerMovement : MonoBehaviour
     private float _wallJumpApexPoint;
     private float _timePastWallJumppApexThreshold;
     private bool _isPastWallJumpApexThreshold;
+    private Animator anim;
 
     private void Awake()
     {
         _isFacingRight = true;
 
         _rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -88,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (_isGrounded)
         {
             Move(MoveStats.GroundAcceleration, MoveStats.GroundDecceleration, InputManager.Movement);
+            anim.SetTrigger("Walking");
         }
         else
         {
@@ -211,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
         //JUMP
         if (InputManager.JumpWasPressed)
         {
+            anim.SetTrigger("Jump");
             if(_isWallSlideFalling && _wallJumpPostBufferTimer >= 0f)
             {
                 return;
