@@ -11,6 +11,10 @@ public class GrabObjects : MonoBehaviour
 
     private GameObject grabbedObject;
 
+    private void Start()
+    {
+        checkDrop.dontDrop = true;
+    }
     private void Update()
     {
         if(checkDrop.detectCannon)
