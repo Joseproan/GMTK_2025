@@ -3,14 +3,18 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+    [HideInInspector] public string startMusicName;
     public static AudioManager Instance;
 
-    public Sound[] musicSounds, sfxSounds;
+    public Sound[] musicSounds;
+    public SFXCategory[] sfxCategories;
+
     public AudioSource musicSource, sfxSource;
 
-    public void Awake()
+
+    private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -23,34 +27,44 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        //PlayMusic();
+        if (!string.IsNullOrEmpty(startMusicName))
+        {
+            PlayMusic(startMusicName);
+        }
     }
+
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(musicSounds, x => x.name == name);
-
-        if(s == null)
+        if (s == null)
         {
-            Debug.Log("Sound Not Found");
+            Debug.LogWarning("Music not found: " + name);
         }
         else
         {
             musicSource.clip = s.clip;
+            musicSource.volume = s.volume;
             musicSource.Play();
         }
     }
 
-    public void PlaySFX(string name)
+    public void PlaySFX(string category, string name)
     {
-        Sound s = Array.Find(sfxSounds, x => x.name == name);
-
-        if(s == null)
+        SFXCategory cat = Array.Find(sfxCategories, c => c.categoryName == category);
+        if (cat == null)
         {
-            Debug.Log("Sound Not Found");
+            Debug.LogWarning($"SFX Category '{category}' not found");
+            return;
+        }
+
+        Sound s = Array.Find(cat.sounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning($"Sound '{name}' not found in category '{category}'");
         }
         else
         {
-            sfxSource.PlayOneShot(s.clip);
+            sfxSource.PlayOneShot(s.clip, s.volume);
         }
     }
 
@@ -58,6 +72,7 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.mute = !musicSource.mute;
     }
+
     public void ToggleSFX()
     {
         sfxSource.mute = !sfxSource.mute;

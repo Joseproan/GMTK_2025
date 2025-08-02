@@ -95,7 +95,8 @@ public class Bullet : MonoBehaviour
                 playerDeath.Die();
                 // instantiate corpse
                 Instantiate(corpsePrefab, transform.position, Quaternion.identity);
-                
+                AudioManager.Instance.PlaySFX("Death", "Fire");
+
                 ReturnToPool();
             }
             
