@@ -215,7 +215,8 @@ public class PlayerMovement : MonoBehaviour
         if (InputManager.JumpWasPressed)
         {
             anim.SetTrigger("Jump");
-            if(_isWallSlideFalling && _wallJumpPostBufferTimer >= 0f)
+            AudioManager.Instance.PlaySFX("Player", "Jump");
+            if (_isWallSlideFalling && _wallJumpPostBufferTimer >= 0f)
             {
                 return;
             }

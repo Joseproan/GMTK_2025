@@ -29,6 +29,7 @@ public class Cannon : MonoBehaviour
             if (shootTimer <= 0f)
             {
                 Shoot(transform.up);
+                AudioManager.Instance.PlaySFX("Cannon", bulletTag);
                 shootTimer = shootCooldown;
             }
         }
