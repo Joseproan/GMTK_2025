@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Restart",
+                    "type": "Button",
+                    "id": "73dba050-f8d8-4fe9-a5ae-ab0efcca357d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -147,6 +156,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bfaaa473-b52e-4692-98ec-1d52e7d37325",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "bdc725da-ed60-48a3-8181-c1def895eadb",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -182,6 +202,17 @@
                     "name": "",
                     "id": "c5976e68-dbc1-4f4a-bd7e-0e2b82bcabf3",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93fdcc9d-98e7-433e-8193-cfdbe5d5e0d2",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -241,6 +272,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "DownArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c487bec-bfa1-46d5-b49f-3e374634f0c9",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
