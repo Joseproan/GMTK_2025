@@ -1,19 +1,15 @@
 using System;
 using Ink.Runtime;
-using TMPro;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    [Header("Player Dialogue UI")]
-    public PlayerDialogueUI playerDialogueUI;
-    
-    [HideInInspector] public GameObject npcDialogueBox;
-    [HideInInspector] public TextMeshProUGUI npcDialogueText;
-    
+    [Header("Ink")]
+    [SerializeField] private TextAsset inkJSONAsset;
     private Story currentStory;
+    private string currentNPC;
     public bool DialogueIsPlaying { get; private set; }
     
     private void Awake()
@@ -25,37 +21,44 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON, string npcName)
     {
         currentStory = new Story(inkJSON.text);
+        currentNPC = npcName;
         DialogueIsPlaying = true;
+        DialogueUI.Instance.ShowUI(true);
         ContinueStory();
     }
 
     public void ContinueStory()
     {
-        if (IsPlayerTalking())
+        if (currentStory.currentChoices.Count > 0)
         {
-            
-        }
-        else
-        {
-            
+            DialogueUI.Instance.SetSpeaker("Pebble");
+            DialogueUI.Instance.HideNPCLine();
+            DialogueUI.Instance.DisplayChoices(currentStory.currentChoices);
         }
         
-    }
-
-    private bool IsPlayerTalking()
-    {
-        if (currentStory.currentChoices.Count > 0) return true;
-
-        var savedState = currentStory.state.ToJson();
-        // Peek at the next line
-        string nextLine = currentStory.Continue().Trim();
-        // Restore story state (undo the peek)
-        currentStory.state.LoadJson(savedState);
+        else if (CanContinueStory())
+        {
+            string text = currentStory.Continue().Trim();
+            DialogueUI.Instance.SetSpeaker(currentNPC);
+            DialogueUI.Instance.DisplayNPCLine(text);
+            DialogueUI.Instance.ClearChoices();
+            if (text.Length == 0)
+            {
+                if (currentStory.currentChoices.Count > 0)
+                {
+                    DialogueUI.Instance.SetSpeaker("Pebble");
+                    DialogueUI.Instance.HideNPCLine();
+                    DialogueUI.Instance.DisplayChoices(currentStory.currentChoices);
+                }
+            }
+        }
         
-        return nextLine.Length == 0;
+        else if (!CanContinueStory())
+        {
+            ExitDialogueMode();
+        }
     }
-    
-    
+
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);

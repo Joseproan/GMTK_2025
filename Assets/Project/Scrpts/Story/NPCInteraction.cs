@@ -1,13 +1,19 @@
+using System;
 using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
     public TextAsset inkJSON;
-    public GameObject interactionUI;
+    private GameObject interactionUI;
     public float interactionRange = 3f;
     public string npcName;
     private Transform player;
     private bool isPlayerNear = false;
+
+    private void Awake()
+    {
+        interactionUI = FindFirstObjectByType<PlayerDialogueUI>().interactionCanvas;
+    }
 
     public virtual void Start()
     {
