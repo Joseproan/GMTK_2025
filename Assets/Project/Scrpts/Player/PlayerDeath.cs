@@ -1,12 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 
 public class PlayerDeath : MonoBehaviour
 {
     public Transform checkpoint; // Assign this in the inspector or dynamically
     public bool isAlive = true;
-
+    public CinemachineCamera virtualCamera;
+    
     private SpriteRenderer spriteRenderer;
     private Collider2D playerCollider;
     private PlayerMovement playerMovement;
@@ -26,7 +28,7 @@ public class PlayerDeath : MonoBehaviour
 
         // Optional: disable controls, collider, etc.
         SetPlayerActive(false);
-
+        virtualCamera.Follow = null;
         StartCoroutine(RespawnAfterDelay(1f));
     }
 
@@ -36,6 +38,7 @@ public class PlayerDeath : MonoBehaviour
 
         // Move to checkpoint
         transform.position = checkpoint.position;
+        virtualCamera.Follow = transform;
 
         // Optional: reset velocity if using Rigidbody
         Rigidbody2D rb = GetComponent<Rigidbody2D>();

@@ -42,8 +42,29 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2290433037
+    locked: 0
+  - name: Clouds
+    uniqueID: 2380902713
+    locked: 0
+  - name: City Background
+    uniqueID: 2171672183
+    locked: 0
+  - name: On Ground
+    uniqueID: 3945741475
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2227539635
+    locked: 0
+  - name: Ground
+    uniqueID: 3294183753
+    locked: 0
+  - name: Foreground
+    uniqueID: 3521304869
     locked: 0
   m_RenderingLayers:
   - Default

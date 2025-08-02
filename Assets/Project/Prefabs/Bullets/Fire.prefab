@@ -76,15 +76,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -349225821
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a68a400bd6dae64987213949f27c5aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd6cde32bc2431b4a8b6028735c2f001, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.76, y: 0.78}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,6 +105,11 @@ MonoBehaviour:
   speed: 3
   lifeTime: 20
   corpsePrefab: {fileID: 7394186905179221359, guid: e72070231cebfc24395875647a158ae4, type: 3}
+  duration: 0.5
+  easeType: 27
+  delay: 0
+  particlePrefab: {fileID: 0}
+  particleColor: {r: 1, g: 1, b: 1, a: 1}
   parentCannon: {fileID: 0}
 --- !u!58 &6531622340776517148
 CircleCollider2D:

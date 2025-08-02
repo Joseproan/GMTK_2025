@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4406115780512463281}
   - component: {fileID: 8423627452992315078}
   - component: {fileID: 803703696057350945}
+  - component: {fileID: 517952496298853121}
   m_Layer: 8
   m_Name: Fence
   m_TagString: Cannon
@@ -109,15 +110,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -349225821
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6ce46774919528c449c116cdd93a4200, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dfbc17a34c45d0f4a89b906599ac0b78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.82, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -209,7 +210,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.82, y: 1.73}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 1.82, y: 1.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -229,3 +230,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corpsePrefab: {fileID: 7394186905179221359, guid: 28099a65d1aefae49ab83d99ac329be6, type: 3}
+--- !u!95 &517952496298853121
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402628354496562595}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6affbbbbceab01e43b34bffd4265cd65, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
