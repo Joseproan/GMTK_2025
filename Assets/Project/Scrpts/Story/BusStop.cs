@@ -20,6 +20,9 @@ public class BusStop : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 0.5f;
     
+    [Header("Additional")]
+    public bool goToMainMenu = false;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
@@ -42,7 +45,8 @@ public class BusStop : MonoBehaviour
                 fadeImage.color = new Color(0, 0, 0, 0);
                 fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
                 {
-                    SceneManager.LoadScene(sceneBuildIndex: SceneManager.GetActiveScene().buildIndex + 1);
+                    if (goToMainMenu) SceneManager.LoadScene("MainMenu");
+                    else SceneManager.LoadScene(sceneBuildIndex: SceneManager.GetActiveScene().buildIndex + 1);
                 });
             });
     }

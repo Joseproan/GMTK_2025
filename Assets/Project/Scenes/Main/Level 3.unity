@@ -1886,6 +1886,7 @@ MonoBehaviour:
   waitAtFullScale: 1
   fadeImage: {fileID: 1961201356}
   fadeDuration: 0.5
+  goToMainMenu: 1
 --- !u!61 &1090121434
 BoxCollider2D:
   m_ObjectHideFlags: 0
