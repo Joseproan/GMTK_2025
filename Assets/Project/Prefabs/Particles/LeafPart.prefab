@@ -1317,7 +1317,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 193
-        ctime1: 16384
+        ctime1: 15613
         ctime2: 65535
         ctime3: 65535
         ctime4: 0
@@ -1325,7 +1325,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 49151
+        atime1: 35273
         atime2: 65535
         atime3: 65535
         atime4: 0

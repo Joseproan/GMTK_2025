@@ -544,7 +544,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -349225821
   m_SortingLayer: -1
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cca8d9e007a71a642aef860602a94669, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2273,7 +2273,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -349225821
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 12f2ad8c08e72084baccf4ad1610a0ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23295,6 +23295,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8809638275623422748, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 35273
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809638275623422748, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.ctime1
+      value: 15613
+      objectReference: {fileID: 0}
     - target: {fileID: 9182640313906909451, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
       propertyPath: m_Name
       value: LeafPart
@@ -23317,6 +23325,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 567050579549499023, guid: 2cb23658e7bc1b648b74a5afa5af4286, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 567050579549499023, guid: 2cb23658e7bc1b648b74a5afa5af4286, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 0.2
       objectReference: {fileID: 0}
@@ -23330,11 +23342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4434213882298572665, guid: 2cb23658e7bc1b648b74a5afa5af4286, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.48
+      value: -7.68
       objectReference: {fileID: 0}
     - target: {fileID: 4434213882298572665, guid: 2cb23658e7bc1b648b74a5afa5af4286, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.74
+      value: 3.7700002
       objectReference: {fileID: 0}
     - target: {fileID: 4434213882298572665, guid: 2cb23658e7bc1b648b74a5afa5af4286, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23391,7 +23403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6913554159856219818, guid: 955118052db24b849a48b5e6a21cbbc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 3.51
       objectReference: {fileID: 0}
     - target: {fileID: 6913554159856219818, guid: 955118052db24b849a48b5e6a21cbbc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23424,6 +23436,10 @@ PrefabInstance:
     - target: {fileID: 6913554159856219818, guid: 955118052db24b849a48b5e6a21cbbc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518760449764490678, guid: 955118052db24b849a48b5e6a21cbbc6, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7518760449764490678, guid: 955118052db24b849a48b5e6a21cbbc6, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
