@@ -215,6 +215,9 @@ MonoBehaviour:
     - name: Fall
       clip: {fileID: 8300000, guid: 8ce7097f3b5cbf4438c2e060353adcd3, type: 3}
       volume: 0.05
+    - name: Respawn
+      clip: {fileID: 8300000, guid: 036f0b3b2f52b144380b08940a1a98cf, type: 3}
+      volume: 0.5
   - categoryName: NPC
     sounds:
     - name: Blink

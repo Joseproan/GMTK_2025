@@ -879,6 +879,7 @@ MonoBehaviour:
   checkpoint: {fileID: 0}
   isAlive: 1
   virtualCamera: {fileID: 0}
+  deathParticles: {fileID: 141433446842962269, guid: c37670dd88b2be2438bda3f0dbc30005, type: 3}
 --- !u!114 &4869351453063093226
 MonoBehaviour:
   m_ObjectHideFlags: 0

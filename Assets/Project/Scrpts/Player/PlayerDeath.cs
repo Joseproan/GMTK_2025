@@ -8,7 +8,8 @@ public class PlayerDeath : MonoBehaviour
     public Transform checkpoint; // Assign this in the inspector or dynamically
     public bool isAlive = true;
     public CinemachineCamera virtualCamera;
-    
+    public GameObject deathParticles;
+
     private SpriteRenderer spriteRenderer;
     private Collider2D playerCollider;
     private PlayerMovement playerMovement;
@@ -39,6 +40,8 @@ public class PlayerDeath : MonoBehaviour
         // Move to checkpoint
         transform.position = checkpoint.position;
         virtualCamera.Follow = transform;
+        Instantiate(deathParticles, checkpoint);
+        AudioManager.Instance.PlaySFX("Player", "Respawn");
 
         // Optional: reset velocity if using Rigidbody
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
