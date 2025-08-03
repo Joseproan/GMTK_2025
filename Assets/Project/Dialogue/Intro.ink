@@ -7,8 +7,8 @@
 + Why is it ringing in my ears?
     -> whyRinging
 + Ah right, time to wake up
-    - I have to go to work.
-    -> dontWannaWork
+    ++ I have to go to work.
+        -> dontWannaWork
 
 === whyRinging ===
 Its job is to wake you up.

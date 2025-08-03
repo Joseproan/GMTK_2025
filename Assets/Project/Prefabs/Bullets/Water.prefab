@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b1b7aef3d02b54598775cf71b3955d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   lifeTime: 20
   corpsePrefab: {fileID: 7394186905179221359, guid: 0a8339b3a2532d940b41d410c255ce79, type: 3}
   duration: 3
