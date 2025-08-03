@@ -56,6 +56,7 @@ MonoBehaviour:
   particlePrefab: {fileID: 0}
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   parentCannon: {fileID: 0}
+  bulletElement: Lighting
 --- !u!58 &6531622340776517148
 CircleCollider2D:
   m_ObjectHideFlags: 0

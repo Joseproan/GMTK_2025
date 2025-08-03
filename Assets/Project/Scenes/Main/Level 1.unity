@@ -850,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.74}
+  m_AnchoredPosition: {x: 0, y: 0.68}
   m_SizeDelta: {x: 344.8763, y: 184.3733}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &446456838
@@ -875,8 +875,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You can remove dead bodies by restarting from pause menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
+  m_sharedMaterial: {fileID: -8567703629506830862, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -900,8 +900,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1884,6 +1884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018002178}
   - component: {fileID: 1018002179}
+  - component: {fileID: 1018002180}
   m_Layer: 0
   m_Name: npc__cafe_girl
   m_TagString: Untagged
@@ -1961,6 +1962,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1018002180
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018002177}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7431e051895e054f845c901b3ea6a2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1060209614
 GameObject:
   m_ObjectHideFlags: 0
@@ -22919,8 +22942,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dying is the way out
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
+  m_sharedMaterial: {fileID: -8567703629506830862, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22944,8 +22967,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23224,6 +23247,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d7dcb9181c7cc147a840f6c197226b7, type: 3}
+--- !u!1001 &2942661984672653139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2426416092109721845, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182640313906909451, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
+      propertyPath: m_Name
+      value: LeafPart
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8e36c576d472d748aac8d25316ef694, type: 3}
 --- !u!1001 &8386389660749808300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23247,7 +23327,7 @@ PrefabInstance:
     - target: {fileID: 696287083872332557, guid: 03629fa98325cf04dbca67ea25c22224, type: 3}
       propertyPath: virtualCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 664640552}
     - target: {fileID: 2383801538639260251, guid: 03629fa98325cf04dbca67ea25c22224, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -23372,3 +23452,4 @@ SceneRoots:
   - {fileID: 845535638}
   - {fileID: 1429736484}
   - {fileID: 1215108381}
+  - {fileID: 2942661984672653139}
