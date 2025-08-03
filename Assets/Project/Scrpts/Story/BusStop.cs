@@ -22,7 +22,12 @@ public class BusStop : MonoBehaviour
     
     [Header("Additional")]
     public bool goToMainMenu = false;
-    
+
+    private void Start()
+    {
+        easeOut = Ease.Linear;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;

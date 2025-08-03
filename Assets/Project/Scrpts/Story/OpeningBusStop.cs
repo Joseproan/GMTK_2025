@@ -9,27 +9,22 @@ public class OpeningBusStop : MonoBehaviour
     public Ease easeOut = Ease.Linear;
     public float delay = 0f;
     public float waitAtFullScale = 1f;
-    
+
     [Header("Player")]
     public GameObject player;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         player.SetActive(false);
         transform.localScale = Vector3.zero;
 
         Sequence sequence = DOTween.Sequence();
-        sequence.AppendInterval(waitAtFullScale)
-                .Append(transform.DOScale(Vector3.one, duration)
+        sequence.AppendInterval(delay)
+            .Append(transform.DOScale(Vector3.one, duration)
                 .SetEase(easeIn)
-                .SetDelay(delay))
-                .AppendInterval(waitAtFullScale)
-                .Append(transform.DOScale(Vector3.zero, duration)
-                .SetEase(easeOut)
-                .OnComplete(() => player.SetActive(true))
-                );
+                .OnComplete(() => player.SetActive(true)))
+            .AppendInterval(waitAtFullScale)
+            .Append(transform.DOScale(Vector3.zero, duration)
+                .SetEase(easeOut));
     }
-
-
 }
