@@ -2,22 +2,33 @@ using UnityEngine;
 
 public class LightingCorpse : MonoBehaviour
 {
-    public float pushForce = 20f;
+    GameObject[] cannons;
+    GameObject[] electricCannons;
+    string electricCannon = "Lightning";
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    int currentIndex = 0;
+    float speed = 2f; // Velocidad del lerp
+
+    private void Start()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
-            if (playerRb != null)
-            {
-                // Usamos el punto de contacto real para mayor precisión
-                ContactPoint2D contact = collision.contacts[0];
-                Vector2 pushDir = (contact.point - (Vector2)transform.position).normalized;
+        cannons = GameObject.FindGameObjectsWithTag("Cannon");
+        electricCannons = System.Array.FindAll(cannons, cannon =>
+        cannon.GetComponent<Cannon>()?.bulletTag == electricCannon);
+    }
 
-                playerRb.linearVelocity = Vector2.zero; // Reset para evitar interferencias
-                playerRb.AddForce(pushDir * pushForce, ForceMode2D.Impulse);
-            }
+    private void Update()
+    {
+        if (electricCannons.Length == 0) return;
+
+        Vector3 targetPos = electricCannons[currentIndex].transform.position;
+
+        // Mueve hacia el objetivo a velocidad constante
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, targetPos) < 2f)
+        {
+            currentIndex = (currentIndex + 1) % electricCannons.Length;
         }
     }
+
 }
