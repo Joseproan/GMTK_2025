@@ -71,7 +71,7 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(true); // in case it was inactive from pool
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
 
