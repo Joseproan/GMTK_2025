@@ -1,6 +1,7 @@
 using System;
 using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     private string currentNPC;
     public bool DialogueIsPlaying { get; private set; }
+
+    public IntroDialogue introDialogue;
     
     private void Awake()
     {
@@ -70,6 +73,12 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueIsPlaying = false;
         DialogueUI.Instance.ShowUI(false);
+
+        if (introDialogue != null)
+        {
+            introDialogue.IntroDone();
+            introDialogue = null;
+        }
     }
 
     public bool CanContinueStory() => currentStory != null && currentStory.canContinue;

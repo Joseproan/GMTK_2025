@@ -25,7 +25,11 @@ public class Cannon : MonoBehaviour
 
     private void Update()
     {
-        if (player == null) return;
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+            if (player == null) return;
+        }
 
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance <= detectionRange)

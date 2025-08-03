@@ -54,13 +54,10 @@ But I don't think you have what it takes.
 + I DON'T WANNA GO TO WORK. I DON'T WANNA GO TO WORK. I DON'T WANNA GO TO WORK.
     ++ I have to work every day. Then I have to work every tomorrow.
         +++ IT'S LIKE A TIMELOOP.
-            - you're right. It IS a loop.
-+ I wanna get out of it. I would die to get out of it.
-    - I don't think dying can help.
-+ It can. 
-    ++ It has to.
-        +++ Dying is the way out.
-            ++++ Dying IS the way out. 
-                +++++ Dying-
-                    - Alright, time to wake up.
+            - you're right. It IS a loop. feel better?
+            -> Ending
+            
+=== Ending ===
++ No
+- Whatever, it's time to wake up
 -> END

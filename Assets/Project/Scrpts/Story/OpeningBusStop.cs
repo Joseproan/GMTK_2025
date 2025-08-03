@@ -6,7 +6,7 @@ public class OpeningBusStop : MonoBehaviour
     [Header("Scale Settings")]
     public float duration = 0.5f;
     public Ease easeIn = Ease.OutBack;
-    public Ease easeOut = Ease.InBack;
+    public Ease easeOut = Ease.Linear;
     public float delay = 0f;
     public float waitAtFullScale = 1f;
     

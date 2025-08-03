@@ -651,7 +651,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Matt
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &263637020
@@ -1228,6 +1228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSONAsset: {fileID: 0}
+  introDialogue: {fileID: 0}
 --- !u!4 &623919940
 Transform:
   m_ObjectHideFlags: 0
@@ -2254,7 +2255,6 @@ MonoBehaviour:
   easeOut: 26
   delay: 0
   waitAtFullScale: 1
-  nextSceneName: Level 3
   fadeImage: {fileID: 1961201356}
   fadeDuration: 0.5
 --- !u!61 &1090121434
@@ -2413,6 +2413,7 @@ MonoBehaviour:
   interactionUI: {fileID: 1489299477}
   interactionRange: 3
   npcName: Boots
+  player: {fileID: 0}
 --- !u!1 &1229910563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9457,7 +9458,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hello
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdd5c4e49699dfe42b1915d0876bacde, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9523,7 +9524,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1660674767

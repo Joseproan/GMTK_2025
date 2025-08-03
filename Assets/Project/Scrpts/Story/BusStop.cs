@@ -12,12 +12,9 @@ public class BusStop : MonoBehaviour
     [Header("Scale Settings")]
     public float duration = 0.5f;
     public Ease easeIn = Ease.OutBack;
-    public Ease easeOut = Ease.InBack;
+    public Ease easeOut = Ease.Linear;
     public float delay = 0f;
     public float waitAtFullScale = 1f;
-
-    [Header("Scene")]
-    public string nextSceneName;
 
     [Header("Fade")]
     public Image fadeImage;
@@ -45,7 +42,7 @@ public class BusStop : MonoBehaviour
                 fadeImage.color = new Color(0, 0, 0, 0);
                 fadeImage.DOFade(1f, fadeDuration).OnComplete(() =>
                 {
-                    SceneManager.LoadScene(nextSceneName);
+                    SceneManager.LoadScene(sceneBuildIndex: SceneManager.GetActiveScene().buildIndex + 1);
                 });
             });
     }

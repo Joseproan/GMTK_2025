@@ -7,13 +7,8 @@ public class NPCInteraction : MonoBehaviour
     public GameObject interactionUI;
     public float interactionRange = 3f;
     public string npcName;
-    private Transform player;
+    public Transform player;
     private bool isPlayerNear = false;
-
-    private void Awake()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
     public virtual void Start()
     {
