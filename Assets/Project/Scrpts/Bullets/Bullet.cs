@@ -24,7 +24,6 @@ public class Bullet : MonoBehaviour
     private Vector2 moveDirection;
     private float lifeTimer;
     [HideInInspector] public GameObject parentCannon;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -95,7 +94,7 @@ public class Bullet : MonoBehaviour
                 playerDeath.Die();
                 // instantiate corpse
                 Instantiate(corpsePrefab, collision.gameObject.transform.position, Quaternion.identity);
-                AudioManager.Instance.PlaySFX("Death", "Fire");
+                AudioManager.Instance.PlaySFX("Death", this.name);
 
                 ReturnToPool();
             }
