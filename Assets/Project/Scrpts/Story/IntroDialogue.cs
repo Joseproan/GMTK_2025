@@ -6,6 +6,8 @@ public class IntroDialogue : NPCInteraction
     public GameObject vCam;
     public GameObject playerObj;
     public GameObject introCamera;
+
+    public string musicName;
     public override void Start()
     {
         base.Start();
@@ -24,5 +26,6 @@ public class IntroDialogue : NPCInteraction
         playerObj.SetActive(true);
         
         introCamera.SetActive(false);
+        AudioManager.Instance.PlayMusic(musicName);
     }
 }

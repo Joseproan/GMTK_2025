@@ -916,6 +916,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: startMusicName
+      value: Alarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d5d5578268c66c24cb63cdbc4cf873c2, type: 3}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].name
+      value: Alarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].volume
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22088,6 +22108,7 @@ MonoBehaviour:
   vCam: {fileID: 664640549}
   playerObj: {fileID: 8386389660749808302}
   introCamera: {fileID: 253880412}
+  musicName: Ottervile
 --- !u!1 &1845121919
 GameObject:
   m_ObjectHideFlags: 0
