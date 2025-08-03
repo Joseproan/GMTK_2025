@@ -815,11 +815,31 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: startMusicName
+      value: npc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 68b040f482696794c80bb7cdc43f1701, type: 3}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].name
+      value: npc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
       propertyPath: musicSounds.Array.data[0].volume
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
       propertyPath: musicSounds.Array.data[1].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
+      propertyPath: musicSounds.Array.data[2].volume
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4768923434235524376, guid: 555f786d92de8ed4a906a78a3457c717, type: 3}
