@@ -175,32 +175,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b90b89f2d57514ab5811404fc1084a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMusicName: Ottervile
   musicSounds:
   - name: Ottervile
     clip: {fileID: 8300000, guid: 3e63893b05307c24f83304146950207d, type: 3}
-    volume: 1
+    volume: 0.5
   - name: Underciry
     clip: {fileID: 8300000, guid: 8af6dabf93e627849ae226109f84ef2b, type: 3}
-    volume: 1
+    volume: 0.5
   sfxCategories:
-  - categoryName: Deaths
+  - categoryName: Death
     sounds:
     - name: Fire
       clip: {fileID: 8300000, guid: 689709597a0517b46bbd50b492ad13e0, type: 3}
       volume: 1
   - categoryName: Player
     sounds:
-    - name: Fire
-      clip: {fileID: 8300000, guid: 689709597a0517b46bbd50b492ad13e0, type: 3}
+    - name: FootSteps
+      clip: {fileID: 8300000, guid: 27db19e85f346d14088e2d27c77a326b, type: 3}
       volume: 1
-  - categoryName: Player
+  - categoryName: NPC
     sounds:
-    - name: Fire
-      clip: {fileID: 8300000, guid: 689709597a0517b46bbd50b492ad13e0, type: 3}
+    - name: Blink
+      clip: {fileID: 8300000, guid: 9c1c6fa5fb73c6d4ba8e754588b43677, type: 3}
       volume: 1
   musicSource: {fileID: 7463185153780381124}
   sfxSource: {fileID: 7333727934362419848}
-  startMusicName: Ottervile
 --- !u!1 &4015692078118248418
 GameObject:
   m_ObjectHideFlags: 0
