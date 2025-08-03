@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
@@ -9,9 +10,13 @@ public class NPCInteraction : MonoBehaviour
     private Transform player;
     private bool isPlayerNear = false;
 
-    public virtual void Start()
+    private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    public virtual void Start()
+    {
         interactionUI.SetActive(false);
     }
 
@@ -23,6 +28,8 @@ public class NPCInteraction : MonoBehaviour
             return;
         }
 
+        if (player == null) return;
+        
         float dist = Vector3.Distance(player.position, transform.position);
         isPlayerNear = dist <= interactionRange;
 

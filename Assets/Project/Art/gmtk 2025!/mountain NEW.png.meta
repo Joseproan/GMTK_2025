@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 79b21fdc42620734cb728325d05d85ef
+guid: 07ec1063373519f4b8b159748ed6324b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8647630557174774952
-    second: bg(2)_0
-  - first:
-      213: -5787065255070875085
-    second: bg(2)_1
-  - first:
-      213: 4523310040956448998
-    second: bg(2)_2
+      213: -2402894833764189557
+    second: mountain NEW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 2
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,12 +72,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 3
-    compressionQuality: 100
-    crunchedCompression: 1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg(2)_0
+      name: mountain NEW_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 364
-        height: 951
+        width: 2806
+        height: 1519
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ac3735bc2e820870800000000000000
-      internalID: 8647630557174774952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg(2)_1
-      rect:
-        serializedVersion: 2
-        x: 598
-        y: 0
-        width: 804
-        height: 1392
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 332ce7bcfc630bfa0800000000000000
-      internalID: -5787065255070875085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg(2)_2
-      rect:
-        serializedVersion: 2
-        x: 1648
-        y: 0
-        width: 1158
-        height: 1525
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6e0ba28448606ce30800000000000000
-      internalID: 4523310040956448998
+      spriteID: b8a3dd831e337aed0800000000000000
+      internalID: -2402894833764189557
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bg(2)_0: 8647630557174774952
-      bg(2)_1: -5787065255070875085
-      bg(2)_2: 4523310040956448998
+      mountain NEW_0: -2402894833764189557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

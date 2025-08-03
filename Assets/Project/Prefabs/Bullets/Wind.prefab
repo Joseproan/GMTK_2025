@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7551185562841863416}
   - component: {fileID: 6531622340776517148}
   - component: {fileID: 1210519578080531845}
+  - component: {fileID: 5527084849611704145}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Bullet
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -349225821
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6024314085494045508, guid: eb3115bf75b6b274e84f19498a4f72ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b1b7aef3d02b54598775cf71b3955d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   lifeTime: 20
   corpsePrefab: {fileID: 7394186905179221359, guid: af395200d7ed4bf4798c31d4927addbb, type: 3}
   duration: 1.5
@@ -174,3 +175,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5527084849611704145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2693031419106768249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf4d9fdfee58444fa90025606554c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAmount: {x: 0, y: 0, z: 360}
+  duration: 2
+  rotateMode: 1
+  easeType: 1
