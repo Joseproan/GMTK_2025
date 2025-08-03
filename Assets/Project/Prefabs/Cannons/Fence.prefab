@@ -138,8 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   firePoint: {fileID: 2826178706462102336}
-  shootCooldown: 1.5
+  shootCooldown: 2
   bulletTag: Lightning
+  direction: 0
 --- !u!50 &4406115780512463281
 Rigidbody2D:
   serializedVersion: 5

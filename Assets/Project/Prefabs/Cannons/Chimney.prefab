@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   firePoint: {fileID: 2826178706462102336}
-  shootCooldown: 4
+  shootCooldown: 2
   bulletTag: Fire
 --- !u!50 &4406115780512463281
 Rigidbody2D:
@@ -225,5 +225,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleAmount: 0.1
-  duration: 1
+  duration: 0.5
   easeType: 4

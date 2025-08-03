@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour
@@ -9,7 +10,11 @@ public class Cannon : MonoBehaviour
     public Transform firePoint;
     public float shootCooldown = 1.5f;
     public string bulletTag = "EnemyBullet";
+    
+    public enum Direction { Left, Right, Up, Down }
 
+    public Direction direction = Direction.Up;
+    
     private Transform player;
     private float shootTimer;
 
@@ -28,7 +33,7 @@ public class Cannon : MonoBehaviour
             shootTimer -= Time.deltaTime;
             if (shootTimer <= 0f)
             {
-                Shoot(transform.up);
+                Shoot(GetDirection());
                 AudioManager.Instance.PlaySFX("Cannon", bulletTag);
                 shootTimer = shootCooldown;
             }
@@ -41,6 +46,23 @@ public class Cannon : MonoBehaviour
         var bullet = bulletObj.GetComponent<Bullet>();
         bullet.parentCannon = gameObject;
         bullet.SetDirection(direction.normalized);
+    }
+
+    Vector3 GetDirection()
+    {
+        switch (direction)
+        {
+            case Direction.Up:
+                return transform.up;
+            case Direction.Down:
+                return -transform.up;
+            case Direction.Left:
+                return -transform.right;
+            case Direction.Right:
+                return transform.right;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 
     private void OnDrawGizmosSelected()

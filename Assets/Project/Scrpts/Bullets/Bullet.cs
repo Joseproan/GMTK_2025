@@ -94,7 +94,7 @@ public class Bullet : MonoBehaviour
             {
                 playerDeath.Die();
                 // instantiate corpse
-                Instantiate(corpsePrefab, transform.position, Quaternion.identity);
+                Instantiate(corpsePrefab, collision.gameObject.transform.position, Quaternion.identity);
                 AudioManager.Instance.PlaySFX("Death", "Fire");
 
                 ReturnToPool();
@@ -106,7 +106,6 @@ public class Bullet : MonoBehaviour
                  layer == LayerMask.NameToLayer("Ground") ||
                  layer == LayerMask.NameToLayer("Cannon") && collision.gameObject != parentCannon)
         {
-            Debug.Log(collision.gameObject.name);
             ReturnToPool();
         }
     }
